@@ -3,7 +3,7 @@ const journeys = [
     icon: '🌱',
     title: 'I’m New to Cryptocurrency',
     text: 'Start your journey by learning the fundamentals of cryptocurrency and blockchain.',
-    href: '#wallettrail-101',
+    href: '/wallettrail-101',
     label: 'Start Here',
   },
   {
@@ -49,7 +49,7 @@ const learningCards = [
     eyebrow: 'Featured Guide',
     title: 'Before You Buy Cryptocurrency',
     text: 'Understand the fundamentals before making your first transaction.',
-    href: '#wallettrail-101',
+    href: '/wallettrail-101',
     label: 'Read Guide',
   },
   {
@@ -77,7 +77,7 @@ export default function Home() {
           <span>WalletTrail</span>
         </a>
         <nav className="site-nav" aria-label="Primary navigation">
-          <a href="#wallettrail-101">Start Here</a>
+          <a href="/wallettrail-101">Start Here</a>
           <a href="#learn-today">Learn</a>
           <a href="#why-wallettrail">About</a>
           <a href="#footer">Contact</a>
@@ -96,7 +96,7 @@ export default function Home() {
               WalletTrail helps people understand blockchain through practical learning, clear explanations and tools designed to make digital asset information easier to understand.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#wallettrail-101">Start Learning</a>
+              <a className="button button-primary" href="/wallettrail-101">Start Learning</a>
               <a className="button button-secondary" href="#why-wallettrail">Explore WalletTrail</a>
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function Home() {
             <p>That&apos;s why we created WalletTrail 101.</p>
             <p>Whether you&apos;re buying cryptocurrency for the first time, sending money to someone else, or simply curious about how blockchain works, we&apos;ll guide you step by step using clear, practical language.</p>
             <p className="learning-list">No assumptions.<br />No unnecessary jargon.<br />Just the knowledge you need to move forward with confidence.</p>
-            <a className="button button-primary" href="#learn-today">Start WalletTrail 101</a>
+            <a className="button button-primary" href="/wallettrail-101">Start WalletTrail 101</a>
           </div>
         </section>
 
@@ -206,7 +206,7 @@ export default function Home() {
             <a className="brand" href="#top"><span className="brand-mark" aria-hidden="true">WT</span><span>WalletTrail</span></a>
             <p>Helping people understand blockchain through practical education, clear guidance and thoughtfully designed resources.</p>
           </div>
-          <div className="footer-column"><h3>Explore</h3><a href="#top">Home</a><a href="#wallettrail-101">Start Here</a><a href="#learn-today">Learn</a><a href="#learn-today">Resources</a><a href="#why-wallettrail">About</a><a href="#footer">Contact</a></div>
+          <div className="footer-column"><h3>Explore</h3><a href="#top">Home</a><a href="/wallettrail-101">Start Here</a><a href="#learn-today">Learn</a><a href="#learn-today">Resources</a><a href="#why-wallettrail">About</a><a href="#footer">Contact</a></div>
           <div className="footer-column"><h3>Legal</h3><a href="#footer">Privacy Policy</a><a href="#footer">Terms of Use</a><a href="#footer">Disclaimer</a></div>
           <div className="footer-column"><h3>Connect</h3><a href="mailto:wallettrail@wallettrailhq.com">Email us</a></div>
         </div>
