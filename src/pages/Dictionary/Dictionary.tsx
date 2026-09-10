@@ -1,3 +1,5 @@
+import './Dictionary.css';
+
 const terms = [
   {
     term: 'Wallet Address',
