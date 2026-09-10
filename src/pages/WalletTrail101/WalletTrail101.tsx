@@ -75,13 +75,11 @@ export default function WalletTrail101() {
 
         <section className="lesson-next">
           <div>
-            <p className="eyebrow">What's next?</p>
+            <p className="eyebrow">Keep exploring</p>
             <h2>Build your understanding one topic at a time.</h2>
-            <p>WalletTrail 101 is the starting point. From here, you can explore individual topics in more depth — from wallet addresses and blockchain networks to security, transactions and digital asset records.</p>
-          </div>
-          <div className="lesson-next-actions">
-            <a className="button button-primary" href="/#learn-today">Explore Learning</a>
-            <a className="button button-secondary" href="/">Return Home</a>
+            <p>
+              When you are ready to go deeper, explore the <a className="text-link" href="/dictionary">WalletTrail Dictionary</a> for individual terms or the <a className="text-link" href="/security">Security Centre</a> for practical security guidance.
+            </p>
           </div>
         </section>
       </main>
