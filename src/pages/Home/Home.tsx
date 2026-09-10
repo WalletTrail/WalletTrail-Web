@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 const journeys = [
   {
     icon: '🌱', title: 'I’m New to Cryptocurrency', text: 'Start your journey by learning the fundamentals of cryptocurrency and blockchain.', href: '/wallettrail-101', label: 'Start Here',
@@ -26,6 +28,15 @@ const learningCards = [
 ];
 
 export default function Home() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    requestAnimationFrame(() => {
+      document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }, []);
+
   return (
     <div className="site-shell">
       <header className="site-header">
