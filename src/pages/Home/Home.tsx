@@ -5,19 +5,19 @@ const journeys = [
     icon: '🌱', title: 'I’m New to Cryptocurrency', text: 'Start your journey by learning the fundamentals of cryptocurrency and blockchain.', href: '/wallettrail-101', label: 'Start Here',
   },
   {
-    icon: '📚', title: 'I Want to Learn', text: 'Explore easy-to-understand guides covering blockchain, wallets, digital assets and more.', href: '#learn-today', label: 'Learn More',
+    icon: '📚', title: 'I Want to Learn', text: 'Explore easy-to-understand guides covering blockchain, wallets, digital assets and more.', href: '/wallettrail-101', label: 'Start Learning',
   },
   {
-    icon: '🔍', title: 'I Want to Understand Something', text: 'Looking for a specific answer? Explore our articles, glossary and educational resources.', href: '#learn-today', label: 'Explore Topics',
+    icon: '🔍', title: 'I Want to Understand Something', text: 'Looking for a specific answer? Explore our articles, glossary and educational resources.', href: '/dictionary', label: 'Explore Dictionary',
   },
   {
-    icon: '🗂️', title: 'I Need to Organise Information', text: 'Learn what blockchain information is important and how to keep it organised for future reference.', href: '#commitment', label: 'Learn How',
+    icon: '🗂️', title: 'I Need to Organise Information', text: 'Learn what blockchain information is important and how to keep it organised for future reference.', href: '/wallettrail-101', label: 'Learn the Basics',
   },
   {
-    icon: '🚨', title: 'I Think Something Went Wrong', text: 'If you’ve experienced a suspicious transaction or think you’ve been affected by fraud, we’ll help you understand what information to preserve and how to organise it.', href: '#commitment', label: 'Get Started', urgent: true,
+    icon: '🚨', title: 'I Think Something Went Wrong', text: 'If you’ve experienced a suspicious transaction or think you’ve been affected by fraud, we’ll help you understand what information to preserve and how to organise it.', href: '/security', label: 'Get Security Guidance', urgent: true,
   },
   {
-    icon: '🌍', title: 'Explore WalletTrail', text: 'Discover everything WalletTrail has to offer, from educational resources to practical blockchain tools.', href: '#why-wallettrail', label: 'Explore',
+    icon: '🌍', title: 'Explore WalletTrail', text: 'Discover everything WalletTrail has to offer, from educational resources to practical blockchain tools.', href: '/wallettrail-101', label: 'Explore',
   },
 ];
 
@@ -50,7 +50,7 @@ export default function Home() {
             <p className="eyebrow">WalletTrail</p><h1 id="hero-title">Helping You Understand Blockchain</h1>
             <p className="hero-text">Whether you&apos;re taking your first steps into cryptocurrency, trying to understand blockchain transactions, or looking for trusted educational resources, you&apos;re in the right place.</p>
             <p className="hero-text hero-text-secondary">WalletTrail helps people understand blockchain through practical learning, clear explanations and tools designed to make digital asset information easier to understand.</p>
-            <div className="hero-actions"><a className="button button-primary" href="/wallettrail-101">Start Learning</a><a className="button button-secondary" href="#why-wallettrail">Explore WalletTrail</a></div>
+            <div className="hero-actions"><a className="button button-primary" href="/wallettrail-101">Start Learning</a><a className="button button-secondary" href="/wallettrail-101">Explore WalletTrail</a></div>
           </div>
           <div className="hero-panel" aria-hidden="true"><div className="hero-orbit orbit-one" /><div className="hero-orbit orbit-two" /><div className="hero-node node-one" /><div className="hero-node node-two" /><div className="hero-node node-three" /><div className="hero-panel-center">WT</div></div>
         </section>
@@ -73,13 +73,11 @@ export default function Home() {
         <section className="section why-section" id="why-wallettrail" aria-labelledby="why-title">
           <div className="section-heading"><p className="eyebrow">Our purpose</p><h2 id="why-title">Why WalletTrail?</h2><p>Blockchain is changing how people store, move and manage value. Understanding it shouldn&apos;t be limited to technical experts.</p><p>WalletTrail was created to help bridge that gap through practical education, structured learning and clear guidance that anyone can follow.</p><p>Whether you&apos;re here to learn, understand or organise blockchain information, our goal is simple:</p><p className="section-emphasis">Help you leave knowing more than when you arrived.</p></div>
           <div className="principles-grid"><article><span>📖</span><h3>Learn Clearly</h3><p>Complex topics explained in plain language without unnecessary jargon.</p></article><article><span>🎯</span><h3>Practical Guidance</h3><p>Learn information you can apply in real-world situations, not just theory.</p></article><article><span>🧩</span><h3>Understand with Confidence</h3><p>Build your knowledge one step at a time through structured learning.</p></article><article><span>🤝</span><h3>Built for Everyone</h3><p>Whether you&apos;re completely new or already familiar with blockchain, there&apos;s always something new to discover.</p></article></div>
-          <a className="button button-secondary" href="#commitment">Learn More About WalletTrail</a>
         </section>
 
         <section className="section commitment-section" id="commitment" aria-labelledby="commitment-title">
           <div className="section-heading"><p className="eyebrow">What we stand for</p><h2 id="commitment-title">Our Commitment</h2><p>At WalletTrail, we believe that understanding blockchain should be accessible to everyone.</p><p>We&apos;re committed to creating educational resources that are practical, accurate and easy to understand, helping people build confidence in a rapidly evolving digital world.</p><p>As blockchain technology continues to grow, so will WalletTrail. We&apos;ll continue learning, improving and creating resources that help our community make informed decisions with greater confidence.</p></div>
           <div className="commitment-grid"><article><span>📚</span><h3>Education First</h3><p>Learning comes before assumptions.</p></article><article><span>🤝</span><h3>Built for People</h3><p>Everything we create starts with the person using it.</p></article><article><span>🎯</span><h3>Practical Knowledge</h3><p>Information you can understand and apply.</p></article><article><span>🔄</span><h3>Always Improving</h3><p>Blockchain evolves, and so will WalletTrail.</p></article></div>
-          <a className="button button-primary" href="#footer">Learn More About Our Mission</a>
         </section>
       </main>
 
