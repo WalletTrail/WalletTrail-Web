@@ -94,14 +94,13 @@ export default function Security() {
           <p>
             If you think something suspicious has happened, stop making further transactions where possible and preserve the information you already have. Keep transaction hashes, wallet addresses, dates and times, screenshots, receipts and relevant messages. Do not delete evidence simply because you are unsure whether it matters.
           </p>
-          <a className="button button-primary" href="/">Return to WalletTrail</a>
         </section>
 
         <section className="security-sources">
           <p className="eyebrow">Trusted guidance</p>
           <h2>Security information changes. Check the source.</h2>
           <p>
-            WalletTrail's security education is informed by current guidance from established security and wallet resources. Always check the official source for product-specific instructions and the latest security notices.
+            WalletTrail&apos;s security education is informed by current guidance from established security and wallet resources. Always check the official source for product-specific instructions and the latest security notices.
           </p>
           <div className="source-links">
             <a href="https://ethereum.org/security" target="_blank" rel="noreferrer">Ethereum.org Security ↗</a>
