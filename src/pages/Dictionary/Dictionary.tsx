@@ -32,14 +32,7 @@ const baseTerms: DictionaryTerm[] = [
 ];
 
 const baseNames = new Set(baseTerms.map((term) => term.term));
-const additionTerms: DictionaryTerm[] = glossaryAdditions
-  .filter(([term]) => !baseNames.has(term))
-  .map(([term, category]) => ({
-    term,
-    category,
-    definition: 'This term is part of the WalletTrail knowledge glossary. Explore the term to understand the concept and its place within the wider blockchain ecosystem.',
-  }));
-
+const additionTerms: DictionaryTerm[] = glossaryAdditions.filter((term) => !baseNames.has(term.term)).map((term) => ({ term: term.term, category: term.category, definition: term.definition }));
 const terms = [...baseTerms, ...additionTerms];
 const categories = ['All', ...Array.from(new Set(terms.map((term) => term.category)))];
 
@@ -85,6 +78,12 @@ export default function Dictionary() {
     shouldScrollToEntry.current = true;
   };
 
+  const selectCategory = (nextCategory: string) => {
+    setCategory(nextCategory);
+    const firstMatch = terms.find((term) => nextCategory === 'All' || term.category === nextCategory);
+    if (firstMatch) setSelectedTerm(firstMatch.term);
+  };
+
   useEffect(() => {
     if (!shouldScrollToEntry.current) return;
     shouldScrollToEntry.current = false;
@@ -92,33 +91,20 @@ export default function Dictionary() {
   }, [selectedTerm]);
 
   return (
-    <main className="dictionary-shell">
-      <header className="dictionary-header">
-        <a className="brand-mark" href="/">WalletTrail</a>
-        <a className="dictionary-back" href="/">Back to WalletTrail</a>
-      </header>
-      <section className="dictionary-hero">
-        <p className="eyebrow">WalletTrail Dictionary</p>
-        <h1>Blockchain terms, explained clearly.</h1>
-        <p className="lead">Search a term, browse a category or choose something you want to understand. Start with the meaning, then explore the context around it.</p>
-      </section>
-      <section className="dictionary-controls" aria-label="Dictionary search and filters">
-        <label className="search-box"><span>Search the dictionary</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try “wallet”, “gas”, “phishing”..." /></label>
-        <div className="category-row" aria-label="Dictionary categories">
-          {categories.map((item) => <button key={item} className={`category-button ${category === item ? 'active' : ''}`} type="button" onClick={() => { setCategory(item); setSelectedTerm(terms.find((term) => item === 'All' || term.category === item)?.term ?? terms[0].term); }}>{item}</button>)}
-        </div>
-      </section>
+    <main className="dictionary-page">
+      <header className="dictionary-header"><a className="brand-mark" href="/">WalletTrail</a><a className="dictionary-back" href="/">Back to WalletTrail</a></header>
+      <section className="dictionary-hero"><p className="eyebrow">WalletTrail Dictionary</p><h1>Blockchain terms, explained clearly.</h1><p>Search a term, browse a category or choose something you want to understand. Start with the meaning, then explore why it matters.</p></section>
       <section className="dictionary-browser">
-        <aside className="dictionary-list" aria-label="Dictionary terms">
-          <div className="dictionary-list-heading"><span>Terms</span><span>{filteredTerms.length}</span></div>
-          {filteredTerms.length ? filteredTerms.map((term) => <button key={term.term} className={`dictionary-list-item ${activeTerm.term === term.term ? 'active' : ''}`} type="button" onClick={() => selectTerm(term.term)}><span>{term.term}</span><small>{term.category}</small></button>) : <p className="dictionary-empty">No terms matched your search.</p>}
-        </aside>
-        <article ref={entryRef} className="dictionary-entry" aria-live="polite">
-          <div className="dictionary-entry-header"><div><p className="dictionary-category">{activeTerm.category}</p><h2>{activeTerm.term}</h2></div></div>
-          <section className="dictionary-section"><h3>What is it?</h3><p>{activeTerm.definition}</p></section>
-          <section className="dictionary-section"><h3>Why does it matter?</h3><p>{whyItMatters(activeTerm.category)}</p></section>
-          {relatedTerms.length > 0 && <section className="dictionary-section related-terms"><h3>Explore related terms</h3><div>{relatedTerms.map((term) => <button key={term.term} className="related-button" type="button" onClick={() => selectTerm(term.term)}>{term.term}</button>)}</div></section>}
-        </article>
+        <div className="dictionary-search-row"><label className="dictionary-search"><span>Search the dictionary</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try “wallet”, “gas”, “phishing”..." /></label><p className="dictionary-count">{filteredTerms.length} terms</p></div>
+        <div className="dictionary-categories" aria-label="Dictionary categories">{categories.map((item) => <button key={item} className={`category-button ${category === item ? 'active' : ''}`} type="button" onClick={() => selectCategory(item)}>{item}</button>)}</div>
+        <div className="dictionary-layout">
+          <aside className="dictionary-list" aria-label="Dictionary terms"><p className="list-label">Browse terms</p>{filteredTerms.length ? filteredTerms.map((term) => <button key={term.term} className={`term-button ${activeTerm.term === term.term ? 'active' : ''}`} type="button" onClick={() => selectTerm(term.term)}><span>{term.term}</span><small>{term.category}</small></button>) : <div className="no-results"><strong>No terms found</strong><p>Try a different word or choose another category.</p></div>}</aside>
+          <article ref={entryRef} className="dictionary-entry" aria-live="polite">
+            <div className="dictionary-entry-heading"><p className="eyebrow">{activeTerm.category}</p><h2>{activeTerm.term}</h2><p className="dictionary-definition">{activeTerm.definition}</p></div>
+            <div className="dictionary-sections"><article><h3>What is it?</h3><p>{activeTerm.definition}</p></article><article><h3>Why does it matter?</h3><p>{whyItMatters(activeTerm.category)}</p></article></div>
+            {relatedTerms.length > 0 && <section className="related-terms"><span>Explore related terms</span><div>{relatedTerms.map((term) => <button key={term.term} type="button" onClick={() => selectTerm(term.term)}>{term.term}</button>)}</div></section>}
+          </article>
+        </div>
       </section>
       <footer className="dictionary-footer"><p>Keep learning. Keep asking questions. Keep building confidence.</p><a href="/wallettrail-101">Continue with WalletTrail 101 →</a></footer>
     </main>
