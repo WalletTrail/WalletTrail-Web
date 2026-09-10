@@ -2,11 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import './Dictionary.css';
 import { glossaryAdditions } from './glossaryAdditions';
 
-type DictionaryTerm = {
-  term: string;
-  category: string;
-  definition: string;
-};
+type DictionaryTerm = { term: string; category: string; definition: string };
 
 const baseTerms: DictionaryTerm[] = [
   { term: 'Blockchain', category: 'Foundations', definition: 'A shared digital record that stores transactions and other data across a network of computers.' },
@@ -35,11 +31,14 @@ const baseTerms: DictionaryTerm[] = [
   { term: 'Security', category: 'Security', definition: 'The practices and precautions used to protect wallets, keys, transactions and digital assets from loss, theft and fraud.' },
 ];
 
-const additionTerms: DictionaryTerm[] = glossaryAdditions.map(([term, category]) => ({
-  term,
-  category,
-  definition: 'This term is part of the WalletTrail knowledge glossary. Explore the term to understand the concept and its place within the wider blockchain ecosystem.',
-}));
+const baseNames = new Set(baseTerms.map((term) => term.term));
+const additionTerms: DictionaryTerm[] = glossaryAdditions
+  .filter(([term]) => !baseNames.has(term))
+  .map(([term, category]) => ({
+    term,
+    category,
+    definition: 'This term is part of the WalletTrail knowledge glossary. Explore the term to understand the concept and its place within the wider blockchain ecosystem.',
+  }));
 
 const terms = [...baseTerms, ...additionTerms];
 const categories = ['All', ...Array.from(new Set(terms.map((term) => term.category)))];
@@ -98,37 +97,22 @@ export default function Dictionary() {
         <a className="brand-mark" href="/">WalletTrail</a>
         <a className="dictionary-back" href="/">Back to WalletTrail</a>
       </header>
-
       <section className="dictionary-hero">
         <p className="eyebrow">WalletTrail Dictionary</p>
         <h1>Blockchain terms, explained clearly.</h1>
         <p className="lead">Search a term, browse a category or choose something you want to understand. Start with the meaning, then explore the context around it.</p>
       </section>
-
       <section className="dictionary-controls" aria-label="Dictionary search and filters">
-        <label className="search-box">
-          <span>Search the dictionary</span>
-          <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try “wallet”, “gas”, “phishing”..." />
-        </label>
+        <label className="search-box"><span>Search the dictionary</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try “wallet”, “gas”, “phishing”..." /></label>
         <div className="category-row" aria-label="Dictionary categories">
-          {categories.map((item) => (
-            <button key={item} className={`category-button ${category === item ? 'active' : ''}`} type="button" onClick={() => { setCategory(item); setSelectedTerm(terms.find((term) => item === 'All' || term.category === item)?.term ?? terms[0].term); }}>
-              {item}
-            </button>
-          ))}
+          {categories.map((item) => <button key={item} className={`category-button ${category === item ? 'active' : ''}`} type="button" onClick={() => { setCategory(item); setSelectedTerm(terms.find((term) => item === 'All' || term.category === item)?.term ?? terms[0].term); }}>{item}</button>)}
         </div>
       </section>
-
       <section className="dictionary-browser">
         <aside className="dictionary-list" aria-label="Dictionary terms">
           <div className="dictionary-list-heading"><span>Terms</span><span>{filteredTerms.length}</span></div>
-          {filteredTerms.length ? filteredTerms.map((term) => (
-            <button key={term.term} className={`dictionary-list-item ${activeTerm.term === term.term ? 'active' : ''}`} type="button" onClick={() => selectTerm(term.term)}>
-              <span>{term.term}</span><small>{term.category}</small>
-            </button>
-          )) : <p className="dictionary-empty">No terms matched your search.</p>}
+          {filteredTerms.length ? filteredTerms.map((term) => <button key={term.term} className={`dictionary-list-item ${activeTerm.term === term.term ? 'active' : ''}`} type="button" onClick={() => selectTerm(term.term)}><span>{term.term}</span><small>{term.category}</small></button>) : <p className="dictionary-empty">No terms matched your search.</p>}
         </aside>
-
         <article ref={entryRef} className="dictionary-entry" aria-live="polite">
           <div className="dictionary-entry-header"><div><p className="dictionary-category">{activeTerm.category}</p><h2>{activeTerm.term}</h2></div></div>
           <section className="dictionary-section"><h3>What is it?</h3><p>{activeTerm.definition}</p></section>
@@ -136,7 +120,6 @@ export default function Dictionary() {
           {relatedTerms.length > 0 && <section className="dictionary-section related-terms"><h3>Explore related terms</h3><div>{relatedTerms.map((term) => <button key={term.term} className="related-button" type="button" onClick={() => selectTerm(term.term)}>{term.term}</button>)}</div></section>}
         </article>
       </section>
-
       <footer className="dictionary-footer"><p>Keep learning. Keep asking questions. Keep building confidence.</p><a href="/wallettrail-101">Continue with WalletTrail 101 →</a></footer>
     </main>
   );
