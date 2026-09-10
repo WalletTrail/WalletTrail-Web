@@ -24,7 +24,7 @@ const journeys = [
 const learningCards = [
   { eyebrow: 'Featured Guide', title: 'Before You Buy Cryptocurrency', text: 'Understand the fundamentals before making your first transaction.', href: '/wallettrail-101', label: 'Read Guide' },
   { eyebrow: 'Blockchain Term of the Week', title: 'Wallet Address', text: 'Learn what it is, why it’s important and how it’s used.', href: '/dictionary', label: 'Learn More' },
-  { eyebrow: 'Security Tip', title: 'Protect Your Recovery Phrase', text: 'Your recovery phrase gives access to your wallet. Keep it private, offline and never share it with anyone.', href: '#security-tip', label: 'View Security Tips' },
+  { eyebrow: 'Security Tip', title: 'Protect Your Recovery Phrase', text: 'Your recovery phrase gives access to your wallet. Keep it private, offline and never share it with anyone.', href: '/security', label: 'View Security Tips' },
 ];
 
 export default function Home() {
