@@ -14,8 +14,7 @@ type DictionaryTerm = {
 
 const terms: DictionaryTerm[] = [
   {
-    term: 'Blockchain',
-    category: 'Foundations',
+    term: 'Blockchain', category: 'Foundations',
     definition: 'A blockchain is a shared digital record that stores transactions and other data across a network of computers.',
     plain: 'Think of it as a record that many computers keep in agreement. Instead of one company controlling the only copy, the network maintains the record together.',
     usedFor: 'Blockchains can record transfers of digital assets, support applications and provide a way to verify what happened on a network.',
@@ -24,8 +23,7 @@ const terms: DictionaryTerm[] = [
     related: ['Transaction', 'Block', 'Network', 'Wallet Address'],
   },
   {
-    term: 'Cryptocurrency',
-    category: 'Foundations',
+    term: 'Cryptocurrency', category: 'Foundations',
     definition: 'A digital asset that can be transferred between participants using cryptographic technology and a blockchain or related network.',
     plain: 'It is digital value that can move between people without needing a traditional bank transfer for every movement.',
     usedFor: 'People use different cryptocurrencies to transfer value, invest, trade, pay for things or interact with blockchain applications.',
@@ -34,8 +32,7 @@ const terms: DictionaryTerm[] = [
     related: ['Coin', 'Token', 'Stablecoin', 'Network'],
   },
   {
-    term: 'Wallet',
-    category: 'Wallets',
+    term: 'Wallet', category: 'Wallets',
     definition: 'A crypto wallet is software or hardware that lets you manage the keys used to access and control digital assets.',
     plain: 'A wallet does not simply contain coins like a physical wallet contains cash. It manages the credentials that let you interact with assets recorded on a blockchain.',
     usedFor: 'Wallets can be used to receive, send, hold and interact with digital assets and blockchain applications.',
@@ -44,8 +41,7 @@ const terms: DictionaryTerm[] = [
     related: ['Wallet Address', 'Private Key', 'Recovery Phrase', 'Public Key'],
   },
   {
-    term: 'Wallet Address',
-    category: 'Wallets',
+    term: 'Wallet Address', category: 'Wallets',
     definition: 'A wallet address is a unique string of characters used to identify a destination for digital assets on a particular blockchain network.',
     plain: 'Think of it as the destination you give someone when you want them to send cryptocurrency to you. It is public information and is not the same as the secret credentials that control a wallet.',
     usedFor: 'You can use an address to receive assets and to look up blockchain activity associated with that address on a suitable explorer.',
@@ -54,8 +50,7 @@ const terms: DictionaryTerm[] = [
     related: ['Wallet', 'Network', 'Transaction', 'Transaction Hash'],
   },
   {
-    term: 'Private Key',
-    category: 'Wallets',
+    term: 'Private Key', category: 'Wallets',
     definition: 'A private key is a secret cryptographic credential that can be used to authorize transactions from a blockchain account.',
     plain: 'It is one of the most sensitive pieces of information connected to a self-custody wallet. Whoever controls the private key may be able to control the associated assets.',
     usedFor: 'Wallet software uses private keys to create signatures that prove a transaction was authorized by the holder of the key.',
@@ -64,8 +59,7 @@ const terms: DictionaryTerm[] = [
     related: ['Wallet', 'Recovery Phrase', 'Public Key', 'Transaction'],
   },
   {
-    term: 'Recovery Phrase',
-    category: 'Wallets',
+    term: 'Recovery Phrase', category: 'Wallets',
     definition: 'A recovery phrase is a sequence of words that can be used to restore access to a compatible self-custody wallet.',
     plain: 'It is effectively a master backup for many self-custody wallets. Anyone who obtains it may be able to gain control of the wallet it restores.',
     usedFor: 'It is primarily used to restore a wallet when a device is lost, replaced or reset.',
@@ -74,8 +68,7 @@ const terms: DictionaryTerm[] = [
     related: ['Wallet', 'Private Key', 'Phishing', 'Security'],
   },
   {
-    term: 'Public Key',
-    category: 'Wallets',
+    term: 'Public Key', category: 'Wallets',
     definition: 'A public key is a cryptographic value that can be shared and is mathematically related to a private key.',
     plain: 'It belongs to the public side of a cryptographic key pair. Depending on the blockchain, a wallet address may be derived from a public key rather than being the public key itself.',
     usedFor: 'Public keys can be used in cryptographic systems to verify signatures or establish relationships with addresses.',
@@ -84,8 +77,7 @@ const terms: DictionaryTerm[] = [
     related: ['Private Key', 'Wallet Address', 'Transaction'],
   },
   {
-    term: 'Transaction',
-    category: 'Transactions',
+    term: 'Transaction', category: 'Transactions',
     definition: 'A blockchain transaction is a digitally submitted instruction that changes state on a blockchain, such as transferring an asset.',
     plain: 'It is the event you create when you tell a blockchain to do something, such as send cryptocurrency from one address to another.',
     usedFor: 'Transactions can transfer assets, interact with smart contracts and perform other actions supported by a network.',
@@ -94,8 +86,7 @@ const terms: DictionaryTerm[] = [
     related: ['Transaction Hash', 'Block', 'Confirmation', 'Gas Fee'],
   },
   {
-    term: 'Transaction Hash',
-    category: 'Transactions',
+    term: 'Transaction Hash', category: 'Transactions',
     definition: 'A transaction hash is a unique-looking identifier generated from the data of a blockchain transaction and commonly used to find that transaction on an explorer.',
     plain: 'Think of it as a reference number for a blockchain transaction. If you have it, you can often use the correct blockchain explorer to inspect what happened.',
     usedFor: 'It helps people locate and reference a specific transaction when checking blockchain records or organising evidence.',
@@ -104,8 +95,7 @@ const terms: DictionaryTerm[] = [
     related: ['Transaction', 'Blockchain', 'Block', 'Network'],
   },
   {
-    term: 'Block',
-    category: 'Foundations',
+    term: 'Block', category: 'Foundations',
     definition: 'A block is a batch of blockchain data that is added to the chain according to the rules of that network.',
     plain: 'Transactions are commonly grouped into blocks. Each new block becomes part of the network history and can be referenced when examining transactions.',
     usedFor: 'Blocks organise blockchain activity and help the network maintain an ordered history of events.',
@@ -114,8 +104,7 @@ const terms: DictionaryTerm[] = [
     related: ['Blockchain', 'Transaction', 'Confirmation'],
   },
   {
-    term: 'Network',
-    category: 'Foundations',
+    term: 'Network', category: 'Foundations',
     definition: 'A blockchain network is the specific blockchain environment on which an asset or transaction exists and is processed.',
     plain: 'Network names matter. An asset can have similar names or representations across different networks, but the network determines where the transaction is recorded.',
     usedFor: 'You need the correct network when sending assets, checking transactions or selecting a blockchain explorer.',
@@ -124,8 +113,7 @@ const terms: DictionaryTerm[] = [
     related: ['Blockchain', 'Wallet Address', 'Transaction', 'BEP-20', 'TRC-20'],
   },
   {
-    term: 'Gas Fee',
-    category: 'Transactions',
+    term: 'Gas Fee', category: 'Transactions',
     definition: 'A gas fee is a network fee paid for processing certain blockchain transactions or computations.',
     plain: 'It is the cost of asking the network to process your transaction. The exact fee system differs between blockchains.',
     usedFor: 'Fees help compensate the network participants responsible for processing and validating activity.',
@@ -134,8 +122,7 @@ const terms: DictionaryTerm[] = [
     related: ['Transaction', 'Network', 'Confirmation', 'Smart Contract'],
   },
   {
-    term: 'Confirmation',
-    category: 'Transactions',
+    term: 'Confirmation', category: 'Transactions',
     definition: 'A confirmation generally refers to a transaction being included in a block and followed by additional blocks or network acceptance.',
     plain: 'The more confirmation or finality a network provides, the more established the transaction becomes under that network’s rules.',
     usedFor: 'Exchanges and other services may wait for a certain number of confirmations before treating a deposit as available.',
@@ -144,8 +131,7 @@ const terms: DictionaryTerm[] = [
     related: ['Transaction', 'Block', 'Network'],
   },
   {
-    term: 'Coin',
-    category: 'Assets',
+    term: 'Coin', category: 'Assets',
     definition: 'A coin is a digital asset that operates natively on its own blockchain network.',
     plain: 'The simplest example is an asset that is built into the network itself rather than created as a separate token on another blockchain.',
     usedFor: 'Coins can be used for transfers, network fees, investment, trading and other activities supported by their native network.',
@@ -154,8 +140,7 @@ const terms: DictionaryTerm[] = [
     related: ['Token', 'Cryptocurrency', 'Network', 'Gas Fee'],
   },
   {
-    term: 'Token',
-    category: 'Assets',
+    term: 'Token', category: 'Assets',
     definition: 'A token is a digital asset created and issued through a blockchain’s existing infrastructure, often using a token standard or smart contract.',
     plain: 'Instead of having its own independent blockchain, a token can operate on another blockchain and follow that network’s rules.',
     usedFor: 'Tokens can represent digital value, utility, access, governance rights or other assets depending on their design.',
@@ -164,8 +149,7 @@ const terms: DictionaryTerm[] = [
     related: ['Coin', 'Smart Contract', 'BEP-20', 'TRC-20'],
   },
   {
-    term: 'Stablecoin',
-    category: 'Assets',
+    term: 'Stablecoin', category: 'Assets',
     definition: 'A stablecoin is a crypto asset designed to maintain a relatively stable value, often by referencing a fiat currency such as the US dollar.',
     plain: 'The goal is usually to reduce the price volatility associated with many other crypto assets, although stability is not guaranteed.',
     usedFor: 'Stablecoins are commonly used for transfers, trading, holding value within crypto markets and moving funds between platforms.',
@@ -174,8 +158,7 @@ const terms: DictionaryTerm[] = [
     related: ['Token', 'Coin', 'Network', 'Exchange'],
   },
   {
-    term: 'Smart Contract',
-    category: 'Applications',
+    term: 'Smart Contract', category: 'Applications',
     definition: 'A smart contract is code deployed on a blockchain that can execute defined actions when its rules and conditions are met.',
     plain: 'Think of it as a program running according to rules recorded on a blockchain. Interacting with it can create a blockchain transaction.',
     usedFor: 'Smart contracts power many decentralised applications, including token systems, exchanges, lending protocols and other blockchain services.',
@@ -184,8 +167,7 @@ const terms: DictionaryTerm[] = [
     related: ['Transaction', 'Gas Fee', 'Token', 'DEX'],
   },
   {
-    term: 'Exchange',
-    category: 'Platforms',
+    term: 'Exchange', category: 'Platforms',
     definition: 'A crypto exchange is a platform where users can buy, sell or trade digital assets.',
     plain: 'It is a marketplace for crypto. Some exchanges hold assets for you, while others let you connect your own wallet directly.',
     usedFor: 'Exchanges can provide trading, deposits, withdrawals and conversion between different digital assets and traditional currencies.',
@@ -194,8 +176,7 @@ const terms: DictionaryTerm[] = [
     related: ['Wallet', 'Transaction', 'Centralized Exchange', 'DEX'],
   },
   {
-    term: 'Centralized Exchange',
-    category: 'Platforms',
+    term: 'Centralized Exchange', category: 'Platforms',
     definition: 'A centralized exchange is a crypto trading platform operated by a company or organisation that typically manages user accounts and custody of assets held on the platform.',
     plain: 'You create an account with a company and the platform manages much of the trading and custody infrastructure for you.',
     usedFor: 'Centralized exchanges are commonly used to buy, sell, trade and withdraw digital assets.',
@@ -204,8 +185,7 @@ const terms: DictionaryTerm[] = [
     related: ['Exchange', 'Wallet', 'Transaction', 'DEX'],
   },
   {
-    term: 'DEX',
-    category: 'Platforms',
+    term: 'DEX', category: 'Platforms',
     definition: 'A decentralised exchange, or DEX, is a blockchain-based system that allows users to trade assets through smart contracts rather than a traditional central order-matching company.',
     plain: 'You generally connect your own wallet and interact directly with blockchain-based trading infrastructure.',
     usedFor: 'DEXs can allow users to swap tokens and interact with decentralised trading protocols.',
@@ -214,8 +194,7 @@ const terms: DictionaryTerm[] = [
     related: ['Smart Contract', 'Exchange', 'Wallet', 'Token'],
   },
   {
-    term: 'BEP-20',
-    category: 'Networks & Standards',
+    term: 'BEP-20', category: 'Networks & Standards',
     definition: 'BEP-20 is a token standard associated with BNB Smart Chain that defines common rules for compatible tokens.',
     plain: 'When you see BEP-20 in a wallet or exchange, it is referring to a token format and network context associated with BNB Smart Chain.',
     usedFor: 'It allows compatible tokens to work with wallets, applications and smart contracts that support the standard.',
@@ -224,14 +203,31 @@ const terms: DictionaryTerm[] = [
     related: ['Token', 'Network', 'Smart Contract', 'Transaction'],
   },
   {
-    term: 'TRC-20',
-    category: 'Networks & Standards',
+    term: 'TRC-20', category: 'Networks & Standards',
     definition: 'TRC-20 is a token standard used on the TRON blockchain for compatible tokens.',
     plain: 'It tells you the token follows a particular standard within the TRON ecosystem. The network matters when moving the asset.',
     usedFor: 'TRC-20 tokens can be transferred between compatible wallets and services that support the TRON network and token standard.',
     check: 'Confirm the destination supports TRC-20 and verify the address and network before sending.',
     mistake: 'Treating TRC-20 and other token standards as interchangeable because the asset name appears the same.',
     related: ['Token', 'Network', 'Wallet Address', 'Transaction'],
+  },
+  {
+    term: 'Phishing', category: 'Security',
+    definition: 'Phishing is a deceptive attempt to trick you into revealing information, approving an action or visiting a malicious website.',
+    plain: 'Someone creates a convincing message, website or social profile that looks legitimate so you trust it with something you should not give them.',
+    usedFor: 'Phishing is commonly used to steal passwords, recovery phrases, private keys, session information or transaction approvals.',
+    check: 'Verify the website address, sender and request independently. Never use links or contact details supplied by an unexpected message without checking them.',
+    mistake: 'Trusting a message because it uses a familiar logo, urgent language, professional wording or a person who appears to be support staff.',
+    related: ['Security', 'Recovery Phrase', 'Private Key', 'Smart Contract'],
+  },
+  {
+    term: 'Security', category: 'Security',
+    definition: 'Crypto security is the set of practices used to protect wallets, credentials, devices, transactions and digital assets from unauthorised access or loss.',
+    plain: 'Good security starts with controlling what you share, where you sign in, what you approve and who you trust.',
+    usedFor: 'Security practices help reduce the chance of losing access to a wallet or accidentally authorising an unwanted transaction.',
+    check: 'Protect recovery phrases and private keys, verify destinations, use trusted software and slow down when a request creates pressure.',
+    mistake: 'Believing a legitimate-looking website, support account or blockchain transaction is automatically safe.',
+    related: ['Phishing', 'Recovery Phrase', 'Private Key', 'Wallet'],
   },
 ];
 
@@ -251,7 +247,7 @@ export default function Dictionary() {
     });
   }, [category, query]);
 
-  const activeTerm = terms.find((term) => term.term === selectedTerm) ?? filteredTerms[0] ?? terms[0];
+  const activeTerm = filteredTerms.find((term) => term.term === selectedTerm) ?? filteredTerms[0] ?? terms[0];
 
   return (
     <div className="dictionary-page">
