@@ -1,0 +1,29 @@
+.brand > span:last-child {
+  display: none;
+}
+
+.brand-mark {
+  width: 54px !important;
+  height: 54px !important;
+  flex: 0 0 54px;
+  display: block !important;
+  border-radius: 50% !important;
+  color: transparent !important;
+  background: url('/assets/wallettrail-logo.webp') center / cover no-repeat !important;
+  box-shadow: 0 8px 20px rgba(13,35,72,.16);
+  font-size: 0 !important;
+  letter-spacing: 0 !important;
+}
+
+.footer-brand .brand-mark {
+  background: url('/assets/wallettrail-logo.webp') center / cover no-repeat !important;
+  box-shadow: none;
+}
+
+@media (max-width: 620px) {
+  .brand-mark {
+    width: 46px !important;
+    height: 46px !important;
+    flex-basis: 46px;
+  }
+}
