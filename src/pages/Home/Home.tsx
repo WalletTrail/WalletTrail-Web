@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 const journeys = [
   {
     icon: '🌱', title: 'I’m New to Cryptocurrency', text: 'Start your journey by learning the fundamentals of cryptocurrency and blockchain.', href: '/wallettrail-101', label: 'Start Here',
@@ -23,6 +25,10 @@ const learningCards = [
 ];
 
 export default function Home() {
+  useEffect(() => {
+    document.title = 'WalletTrail — Helping You Understand Blockchain';
+  }, []);
+
   return (
     <div className="site-shell">
       <header className="site-header">
@@ -57,7 +63,7 @@ export default function Home() {
 
         <section className="section why-section" aria-labelledby="why-title">
           <div className="section-heading"><p className="eyebrow">Our purpose</p><h2 id="why-title">Why WalletTrail?</h2><p>Blockchain is changing how people store, move and manage value. Understanding it shouldn&apos;t be limited to technical experts.</p><p>WalletTrail was created to help bridge that gap through practical education, structured learning and clear guidance that anyone can follow.</p><p>Whether you&apos;re here to learn, understand or organise blockchain information, our goal is simple:</p><p className="section-emphasis">Help you leave knowing more than when you arrived.</p></div>
-          <div className="principles-grid"><article><span>📖</span><h3>Learn Clearly</h3><p>Complex topics explained in plain language without unnecessary jargon.</p></article><article><span>🎯</span><h3>Practical Guidance</h3><p>Learn information you can apply in real-world situations, not just theory.</p></article><article><span>🧩</span><h3>Understand with Confidence</h3><p>Build your knowledge one step at a time through structured learning.</p></article><article><span>🤝</span><h3>Built for Everyone</h3><p>Whether you&apos;re completely new or already familiar with blockchain, there&apos;s always something new to discover.</p></article></div>
+          <div className="principles-grid"><article><span>📖</span><h3>Learn Clearly</h3><p>Complex topics explained in plain language without unnecessary jargon.</p></article><article><span>🎯</span><h3>Practical Guidance</h3><p>Learn information you can apply in real-world situations, not just theory.</p></article><article><span>🧩</span><h3>Understand with Confidence</h3><p>Build your knowledge one step at a time through structured learning.</p></article><article><span>🤝</span><h3>Built for Everyone</h3><p>Whether you're completely new or already familiar with blockchain, there's always something new to discover.</p></article></div>
         </section>
 
         <section className="section commitment-section" aria-labelledby="commitment-title">
