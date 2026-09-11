@@ -73,40 +73,27 @@ export default function Security() {
         </section>
 
         <section className="security-red-flags">
-          <p className="eyebrow">Stop and verify</p>
+          <p className="eyebrow">⚠️ STOP AND VERIFY</p>
           <h2>Pressure is a warning sign.</h2>
           <p>
             Be especially careful when someone tells you that you must act immediately, promises guaranteed returns, asks for your recovery phrase, asks you to install software to “fix” your wallet, or directs you to a link you were not expecting.
           </p>
           <div className="red-flag-list">
-            <span>Urgent payment request</span>
-            <span>Guaranteed profit</span>
-            <span>Fake support</span>
-            <span>Unexpected wallet request</span>
-            <span>Recovery phrase request</span>
-            <span>Unknown software or link</span>
+            <span>🚨 Urgent payment request</span>
+            <span>💰 Guaranteed profit</span>
+            <span>🎭 Fake support</span>
+            <span>⚠️ Unexpected wallet request</span>
+            <span>🔐 Recovery phrase request</span>
+            <span>🔗 Unknown software or link</span>
           </div>
         </section>
 
-        <section className="security-incident">
-          <p className="eyebrow">Something went wrong?</p>
-          <h2>Do not make the situation harder to understand.</h2>
+        <section className="security-incident" aria-label="Something went wrong alert">
+          <p className="eyebrow">🚨 SOMETHING WENT WRONG?</p>
+          <h2>Stop. Preserve what you have.</h2>
           <p>
             If you think something suspicious has happened, stop making further transactions where possible and preserve the information you already have. Keep transaction hashes, wallet addresses, dates and times, screenshots, receipts and relevant messages. Do not delete evidence simply because you are unsure whether it matters.
           </p>
-        </section>
-
-        <section className="security-sources">
-          <p className="eyebrow">Trusted guidance</p>
-          <h2>Security information changes. Check the source.</h2>
-          <p>
-            WalletTrail&apos;s security education is informed by current guidance from established security and wallet resources. Always check the official source for product-specific instructions and the latest security notices.
-          </p>
-          <div className="source-links">
-            <a href="https://ethereum.org/security" target="_blank" rel="noreferrer">Ethereum.org Security ↗</a>
-            <a href="https://support.metamask.io/start/user-guide-secret-recovery-phrase-password-and-private-keys" target="_blank" rel="noreferrer">MetaMask Security Guidance ↗</a>
-            <a href="https://owasp.org/www-project-web3-wallet-security/" target="_blank" rel="noreferrer">OWASP Web3 Wallet Security ↗</a>
-          </div>
         </section>
       </main>
 
