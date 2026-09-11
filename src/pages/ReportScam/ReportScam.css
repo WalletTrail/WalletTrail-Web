@@ -22,9 +22,8 @@
 .ring-one { inset: 7%; }
 .ring-two { inset: 19%; border-color: rgba(23,105,224,.15); transform: rotate(-18deg) scaleY(.82); }
 .ring-three { inset: 31%; border-color: rgba(23,105,224,.09); }
-.report-core { position: absolute; inset: 29%; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; background: #fff; box-shadow: 0 20px 55px rgba(13,35,72,.14); color: var(--navy); }
-.report-core span { font-size: clamp(52px, 7vw, 76px); font-weight: 900; letter-spacing: -.08em; line-height: 1; }
-.report-core small { margin-top: 10px; color: var(--blue); font-size: 10px; font-weight: 800; letter-spacing: .24em; }
+.report-core { position: absolute; inset: 23%; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #fff; box-shadow: 0 20px 55px rgba(13,35,72,.14); overflow: hidden; }
+.report-core img { width: 88%; height: 88%; object-fit: contain; display: block; }
 .report-dot { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 7px rgba(23,105,224,.08), 0 0 18px rgba(23,105,224,.25); }
 .dot-a { top: 7%; left: 50%; transform: translate(-50%, -50%); }
 .dot-b { top: 26%; right: 9%; }
@@ -71,6 +70,8 @@
   .report-hero { min-height: auto; }
   .report-hero-copy h1 { font-size: clamp(38px, 11vw, 56px); }
   .report-hero-visual { width: min(360px, 92vw); }
+  .report-core { inset: 20%; }
+  .report-core img { width: 92%; height: 92%; }
   .investigation-step { grid-template-columns: 58px minmax(0, 1fr); column-gap: 14px; }
   .investigation-step-marker span { width: 44px; height: 44px; }
   .investigation-step-marker i { top: 44px; }
