@@ -101,7 +101,7 @@ export default function Dictionary() {
           <aside className="dictionary-list" aria-label="Dictionary terms"><p className="list-label">Browse terms</p>{filteredTerms.length ? filteredTerms.map((term) => <button key={term.term} className={`term-button ${activeTerm.term === term.term ? 'active' : ''}`} type="button" onClick={() => selectTerm(term.term)}><span>{term.term}</span><small>{term.category}</small></button>) : <div className="no-results"><strong>No terms found</strong><p>Try a different word or choose another category.</p></div>}</aside>
           <article ref={entryRef} className="dictionary-entry" aria-live="polite">
             <div className="dictionary-entry-heading"><p className="eyebrow">{activeTerm.category}</p><h2>{activeTerm.term}</h2><p className="dictionary-definition">{activeTerm.definition}</p></div>
-            <div className="dictionary-sections"><article><h3>What is it?</h3><p>{activeTerm.definition}</p></article><article><h3>Why does it matter?</h3><p>{whyItMatters(activeTerm.category)}</p></article></div>
+            <div className="dictionary-sections"><article><h3>Why does it matter?</h3><p>{whyItMatters(activeTerm.category)}</p></article></div>
             {relatedTerms.length > 0 && <section className="related-terms"><span>Explore related terms</span><div>{relatedTerms.map((term) => <button key={term.term} type="button" onClick={() => selectTerm(term.term)}>{term.term}</button>)}</div></section>}
           </article>
         </div>
