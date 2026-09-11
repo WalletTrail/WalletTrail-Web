@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './Security.css';
+import SiteFooter from '../../components/SiteFooter';
 
 const securityTopics = [
   { title: 'Protect your recovery phrase', text: 'Your recovery phrase can control access to a self-custodial wallet. Never share it with a person, website, support agent or anyone claiming they need it to protect or recover your funds.', action: 'Never enter it into a website or send it by message.' },
@@ -22,7 +23,7 @@ export default function Security() {
         <section className="security-red-flags"><p className="eyebrow">⚠️ STOP AND VERIFY</p><h2>Pressure is a warning sign.</h2><p>Be especially careful when someone tells you that you must act immediately, promises guaranteed returns, asks for your recovery phrase, asks you to install software to “fix” your wallet, or directs you to a link you were not expecting.</p><div className="red-flag-list"><span>🚨 Urgent payment request</span><span>💰 Guaranteed profit</span><span>🎭 Fake support</span><span>⚠️ Unexpected wallet request</span><span>🔐 Recovery phrase request</span><span>🔗 Unknown software or link</span></div></section>
         <section className="security-incident" aria-label="Something went wrong alert"><p className="eyebrow">🚨 SOMETHING WENT WRONG?</p><h2>Stop. Preserve what you have.</h2><p>If you think something suspicious has happened, stop making further transactions where possible and preserve the information you already have. Keep transaction hashes, wallet addresses, dates and times, screenshots, receipts and relevant messages. Do not delete evidence simply because you are unsure whether it matters.</p><a className="button button-primary" href="/evidence">Explore Evidence &amp; Reporting</a></section>
       </main>
-      <footer className="lesson-footer"><span>WalletTrail</span><span>Keep learning. Keep asking questions. Keep building confidence.</span></footer>
+      <SiteFooter />
     </div>
   );
 }
