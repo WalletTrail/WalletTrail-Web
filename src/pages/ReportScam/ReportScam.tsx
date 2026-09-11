@@ -10,6 +10,14 @@ const evidenceItems = [
   'Messages and platform details',
 ];
 
+const investigationSteps = [
+  ['01', 'You tell us what happened', 'Provide the circumstances, platforms involved and information you already have.'],
+  ['02', 'We examine the information', 'We assess the submitted details and identify the blockchain information relevant to the matter.'],
+  ['03', 'We investigate the blockchain activity', 'We trace and analyse relevant transactions, wallet movements and timing.'],
+  ['04', 'We establish what the evidence shows', 'Findings are structured around the available evidence and clearly separated from information that remains unverified.'],
+  ['05', 'We prepare the findings', 'The investigation can result in a structured report that explains the relevant evidence and movements identified.'],
+] as const;
+
 export default function ReportScam() {
   return (
     <div className="site-shell report-scam-page">
@@ -25,41 +33,69 @@ export default function ReportScam() {
       <main>
         <section className="report-hero section" aria-labelledby="report-title">
           <div className="report-hero-copy">
-            <p className="eyebrow">WalletTrail Scam Reporting</p>
+            <p className="eyebrow">Report a Scam</p>
             <h1 id="report-title">Think You’ve Been Affected by a Cryptocurrency Scam?</h1>
             <p>Tell us what happened. Your information gives WalletTrail a starting point for an investigation into the relevant blockchain activity and available evidence.</p>
             <a className="button button-primary report-cta" href="https://forms.gle/uiTbse2c9RMszqGN7" target="_blank" rel="noreferrer">REPORT IT TO WALLETTRAIL <span aria-hidden="true">→</span></a>
             <p className="report-cta-note">Use our secure intake form to provide the information you already have.</p>
           </div>
           <div className="report-hero-visual" aria-hidden="true">
-            <div className="report-ring ring-one" /><div className="report-ring ring-two" />
+            <div className="report-ring ring-one" />
+            <div className="report-ring ring-two" />
+            <div className="report-ring ring-three" />
             <div className="report-core"><span>WT</span><small>EVIDENCE</small></div>
             <span className="report-dot dot-a" /><span className="report-dot dot-b" /><span className="report-dot dot-c" /><span className="report-dot dot-d" />
           </div>
         </section>
 
         <section className="section report-explain" aria-labelledby="meaning-title">
-          <div className="section-heading"><p className="eyebrow">What happens next</p><h2 id="meaning-title">What does “Report a Scam” mean?</h2><p>WalletTrail investigates suspected cryptocurrency scams by examining the information provided alongside relevant blockchain activity and other available evidence.</p><p>Our aim is to establish what the available evidence shows, identify relevant transaction movements and present the findings clearly.</p></div>
+          <div className="section-heading">
+            <p className="eyebrow">What happens next</p>
+            <h2 id="meaning-title">What does “Report a Scam” mean?</h2>
+            <p>WalletTrail investigates suspected cryptocurrency scams by examining the information provided alongside relevant blockchain activity and other available evidence.</p>
+            <p>Our aim is to establish what the available evidence shows, identify relevant transaction movements and present the findings clearly.</p>
+          </div>
         </section>
 
         <section className="section investigation-flow" aria-labelledby="flow-title">
-          <div className="section-heading"><p className="eyebrow">The investigation journey</p><h2 id="flow-title">From your report to our findings</h2></div>
-          <div className="investigation-steps">
-            <article><span>01</span><h3>You tell us what happened</h3><p>Provide the circumstances, platforms involved and information you already have.</p></article>
-            <article><span>02</span><h3>We examine the information</h3><p>We assess the submitted details and identify the blockchain information relevant to the matter.</p></article>
-            <article><span>03</span><h3>We investigate the blockchain activity</h3><p>We trace and analyse relevant transactions, wallet movements and timing.</p></article>
-            <article><span>04</span><h3>We establish what the evidence shows</h3><p>Findings are structured around the available evidence and clearly separated from information that remains unverified.</p></article>
-            <article><span>05</span><h3>We prepare the findings</h3><p>The investigation can result in a structured report that explains the relevant evidence and movements identified.</p></article>
+          <div className="section-heading">
+            <p className="eyebrow">The investigation journey</p>
+            <h2 id="flow-title">From your report to our findings</h2>
+          </div>
+          <div className="investigation-track">
+            {investigationSteps.map(([number, title, text], index) => (
+              <div className="investigation-step" key={number}>
+                <div className="investigation-step-marker"><span>{number}</span>{index < investigationSteps.length - 1 && <i aria-hidden="true" />}</div>
+                <div className="investigation-step-copy">
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="section preserve-section" aria-labelledby="preserve-title">
-          <div className="preserve-copy"><p className="eyebrow">Before you submit</p><h2 id="preserve-title">Preserve what you have.</h2><p>Do not delete information that may help establish what happened. Keep the original messages, transaction details, receipts and screenshots available.</p><p>If someone asks you to send more money to “recover” your cryptocurrency, be cautious. A recovery promise should not be treated as proof that the person can recover your funds.</p></div>
-          <div className="evidence-list"><h3>Useful information can include</h3>{evidenceItems.map((item) => <div className="evidence-item" key={item}><span aria-hidden="true">✓</span>{item}</div>)}</div>
+          <div className="preserve-copy">
+            <p className="eyebrow">Before you submit</p>
+            <h2 id="preserve-title">Preserve what you have.</h2>
+            <p>Do not delete information that may help establish what happened. Keep the original messages, transaction details, receipts and screenshots available.</p>
+            <p>If someone asks you to send more money to “recover” your cryptocurrency, be cautious. A recovery promise should not be treated as proof that the person can recover your funds.</p>
+          </div>
+          <div className="evidence-list">
+            <h3>Useful information can include</h3>
+            <div className="evidence-grid">
+              {evidenceItems.map((item) => <div className="evidence-item" key={item}><span aria-hidden="true">✓</span>{item}</div>)}
+            </div>
+          </div>
         </section>
 
         <section className="section report-boundary" aria-labelledby="boundary-title">
-          <div className="section-heading"><p className="eyebrow">Clear findings</p><h2 id="boundary-title">What WalletTrail investigates</h2><p>We investigate the circumstances presented to us and the blockchain evidence available to us. Our findings describe what the evidence supports; they do not replace the formal powers or processes of law enforcement, regulators or the courts.</p></div>
+          <div className="section-heading">
+            <p className="eyebrow">Clear findings</p>
+            <h2 id="boundary-title">What WalletTrail investigates</h2>
+            <p>We investigate the circumstances presented to us and the blockchain evidence available to us. Our findings describe what the evidence supports; they do not replace the formal powers or processes of law enforcement, regulators or the courts.</p>
+          </div>
           <a className="button button-primary" href="https://forms.gle/uiTbse2c9RMszqGN7" target="_blank" rel="noreferrer">Start Your Scam Report <span aria-hidden="true">→</span></a>
         </section>
       </main>
