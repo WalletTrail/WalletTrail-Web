@@ -3,10 +3,11 @@ import SiteFooter from '../../components/SiteFooter';
 
 const journeys = [
   { icon: '🌱', title: 'I’m New to Cryptocurrency', text: 'Start your journey by learning the fundamentals of cryptocurrency and blockchain.', href: '/wallettrail-101', label: 'Start Here' },
-  { icon: '📚', title: 'I Want to Learn', text: 'Explore easy-to-understand guides covering blockchain, wallets, digital assets and more.', href: '/wallettrail-101', label: 'Start Learning' },
-  { icon: '🔍', title: 'I Want to Understand Something', text: 'Looking for a specific answer? Explore our dictionary for clear explanations of blockchain terms.', href: '/dictionary', label: 'Explore Dictionary' },
+  { icon: '🚨', title: 'Report a Scam', text: 'Dedicated reporting pathway — details to be developed.' },
   { icon: '🗂️', title: 'I Need to Organise Information', text: 'Learn what blockchain information is important and how to keep it organised for future reference.' },
   { icon: '🚨', title: 'I Think Something Went Wrong', text: 'If you’ve experienced a suspicious transaction or think you’ve been affected by fraud, start by preserving the information you already have.', href: '/security', label: 'Start with Security Guidance', urgent: true },
+  { icon: '📚', title: 'I Want to Learn', text: 'Explore easy-to-understand guides covering blockchain, wallets, digital assets and more.', href: '/wallettrail-101', label: 'Start Learning' },
+  { icon: '🔍', title: 'I Want to Understand Something', text: 'Looking for a specific answer? Explore our dictionary for clear explanations of blockchain terms.', href: '/dictionary', label: 'Explore Dictionary' },
 ];
 
 const learningCards = [
