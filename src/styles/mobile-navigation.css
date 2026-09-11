@@ -1,0 +1,58 @@
+@media (max-width: 900px) {
+  .site-header {
+    gap: 18px;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+  }
+
+  .site-nav a {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    min-height: 68px;
+    gap: 12px;
+  }
+
+  .site-nav {
+    gap: 11px;
+  }
+
+  .site-nav a {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .brand {
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .site-header {
+    align-items: flex-start;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    row-gap: 5px;
+    max-width: 190px;
+  }
+}
