@@ -34,7 +34,8 @@ export default function Home() {
       <main id="top">
         <section className="hero section" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow">WalletTrail</p><h1 id="hero-title">Helping You Understand Blockchain</h1>
+            <p className="hero-brand-name" aria-label="WalletTrail"><span>WALLET</span><strong>TRAIL</strong></p>
+            <h1 id="hero-title">Helping You Understand Blockchain</h1>
             <p className="hero-text">Whether you&apos;re taking your first steps into cryptocurrency, trying to understand blockchain transactions, or looking for trusted educational resources, you&apos;re in the right place.</p>
             <p className="hero-text hero-text-secondary">WalletTrail helps people understand blockchain through practical learning, clear explanations and tools designed to make digital asset information easier to understand.</p>
             <div className="hero-actions"><a className="button button-primary" href="/wallettrail-101">Start Learning</a></div>
