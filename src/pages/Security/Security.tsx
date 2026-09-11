@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './Security.css';
 
 const securityTopics = [
@@ -34,6 +35,10 @@ const securityTopics = [
 ];
 
 export default function Security() {
+  useEffect(() => {
+    document.title = 'WalletTrail Security Centre — Stay Safe';
+  }, []);
+
   return (
     <div className="security-page">
       <header className="security-header">
