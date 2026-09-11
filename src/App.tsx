@@ -3,20 +3,15 @@ import WalletTrail101 from './pages/WalletTrail101/WalletTrail101';
 import Dictionary from './pages/Dictionary/Dictionary';
 import Security from './pages/Security/Security';
 
+const routes = {
+  '/wallettrail-101': WalletTrail101,
+  '/dictionary': Dictionary,
+  '/security': Security,
+} as const;
+
 export default function App() {
   const path = window.location.pathname.replace(/\/$/, '') || '/';
+  const Page = routes[path as keyof typeof routes] ?? Home;
 
-  if (path === '/wallettrail-101') {
-    return <WalletTrail101 />;
-  }
-
-  if (path === '/dictionary') {
-    return <Dictionary />;
-  }
-
-  if (path === '/security') {
-    return <Security />;
-  }
-
-  return <Home />;
+  return <Page />;
 }
