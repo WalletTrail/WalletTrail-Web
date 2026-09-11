@@ -1,4 +1,4 @@
-.hero-panel-logo {
+.hero .hero-panel {
   width: min(500px, 100%);
   border-radius: 50%;
   background: radial-gradient(circle at center, #ffffff 0%, #f2f7ff 48%, #e8f2ff 100%);
@@ -7,58 +7,59 @@
   overflow: visible;
 }
 
-.hero-panel-logo::before {
+.hero .hero-panel::before {
   inset: 7%;
   border: 1px solid rgba(23,105,224,.16);
   box-shadow: 0 0 0 18px rgba(23,105,224,.025);
 }
 
-.hero-panel-logo .hero-orbit {
-  inset: 3%;
-  border: 1px solid rgba(23,105,224,.28);
+.hero .hero-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 3%, var(--blue) 0 6px, transparent 7px),
+    radial-gradient(circle at 83% 17%, var(--blue) 0 6px, transparent 7px),
+    radial-gradient(circle at 97% 50%, var(--blue) 0 6px, transparent 7px),
+    radial-gradient(circle at 83% 83%, var(--blue) 0 6px, transparent 7px),
+    radial-gradient(circle at 50% 97%, var(--blue) 0 6px, transparent 7px),
+    radial-gradient(circle at 17% 83%, var(--blue) 0 6px, transparent 7px),
+    radial-gradient(circle at 3% 50%, var(--blue) 0 6px, transparent 7px),
+    radial-gradient(circle at 17% 17%, var(--blue) 0 6px, transparent 7px);
+  filter: drop-shadow(0 0 8px rgba(23,105,224,.32));
 }
 
-.hero-panel-logo .orbit-two {
+.hero .hero-orbit {
+  inset: 3%;
+  border: 1px solid rgba(23,105,224,.28);
+  z-index: 1;
+}
+
+.hero .orbit-two {
   inset: 14%;
   border-style: solid;
   border-color: rgba(23,105,224,.18);
   transform: rotate(-38deg) scaleY(.72);
 }
 
-.hero-panel-logo .orbit-three {
-  inset: 25%;
-  border: 1px dashed rgba(23,105,224,.16);
-  transform: rotate(32deg) scaleY(.68);
-}
+.hero .hero-node { display: none; }
 
-.hero-orbit-dot {
-  position: absolute;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: var(--blue);
-  box-shadow: 0 0 0 7px rgba(23,105,224,.10), 0 0 20px rgba(23,105,224,.28);
-  z-index: 3;
-}
-
-.dot-one { top: 4%; left: 48%; }
-.dot-two { top: 17%; right: 12%; }
-.dot-three { top: 48%; right: 2%; }
-.dot-four { bottom: 16%; right: 16%; }
-.dot-five { bottom: 3%; left: 47%; }
-.dot-six { bottom: 17%; left: 12%; }
-.dot-seven { top: 48%; left: 2%; }
-.dot-eight { top: 17%; left: 12%; }
-
-.hero-logo-core {
+.hero .hero-panel-center {
   position: absolute;
   inset: 15%;
-  display: grid;
-  place-items: center;
+  display: block;
   z-index: 4;
+  border-radius: 50%;
+  color: transparent;
+  font-size: 0;
+  letter-spacing: 0;
+  background: url('/assets/wallettrail-logo.webp') center / contain no-repeat;
+  filter: drop-shadow(0 18px 30px rgba(13,35,72,.18));
 }
 
-.hero-logo-core::before {
+.hero .hero-panel-center::before {
   content: '';
   position: absolute;
   inset: -5%;
@@ -67,21 +68,22 @@
   box-shadow: 0 0 0 12px rgba(23,105,224,.035);
 }
 
-.hero-logo-core img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 50%;
-  filter: drop-shadow(0 18px 30px rgba(13,35,72,.18));
-}
-
 @media (max-width: 900px) {
-  .hero-panel-logo { width: min(460px, 100%); }
+  .hero .hero-panel { width: min(460px, 100%); }
 }
 
 @media (max-width: 620px) {
-  .hero-panel-logo { width: min(420px, 100%); margin: 0 auto; }
-  .hero-logo-core { inset: 13%; }
-  .hero-orbit-dot { width: 11px; height: 11px; box-shadow: 0 0 0 5px rgba(23,105,224,.10), 0 0 16px rgba(23,105,224,.25); }
+  .hero .hero-panel { width: min(420px, 100%); margin: 0 auto; }
+  .hero .hero-panel-center { inset: 13%; }
+  .hero .hero-panel::after {
+    background:
+      radial-gradient(circle at 50% 3%, var(--blue) 0 5px, transparent 6px),
+      radial-gradient(circle at 83% 17%, var(--blue) 0 5px, transparent 6px),
+      radial-gradient(circle at 97% 50%, var(--blue) 0 5px, transparent 6px),
+      radial-gradient(circle at 83% 83%, var(--blue) 0 5px, transparent 6px),
+      radial-gradient(circle at 50% 97%, var(--blue) 0 5px, transparent 6px),
+      radial-gradient(circle at 17% 83%, var(--blue) 0 5px, transparent 6px),
+      radial-gradient(circle at 3% 50%, var(--blue) 0 5px, transparent 6px),
+      radial-gradient(circle at 17% 17%, var(--blue) 0 5px, transparent 6px);
+  }
 }
