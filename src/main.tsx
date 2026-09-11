@@ -4,6 +4,7 @@ import App from './App';
 import './styles/global.css';
 import './styles/mobile-navigation.css';
 import './styles/logo.css';
+import './styles/home-hero.css';
 
 const root = document.getElementById('root');
 
