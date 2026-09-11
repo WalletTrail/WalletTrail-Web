@@ -6,6 +6,7 @@ import Knowledge from './pages/Knowledge/Knowledge';
 import KnowledgeTopic from './pages/Knowledge/KnowledgeTopic';
 import Evidence from './pages/Evidence/Evidence';
 import OrganiseInformation from './pages/OrganiseInformation/OrganiseInformation';
+import ReportScam from './pages/ReportScam/ReportScam';
 import Privacy from './pages/Legal/Privacy';
 import Terms from './pages/Legal/Terms';
 import Notice from './pages/Legal/Notice';
@@ -25,6 +26,7 @@ const routes = {
   '/knowledge/blockchain-evidence': () => <KnowledgeTopic slug="blockchain-evidence" />,
   '/evidence': Evidence,
   '/organise-information': OrganiseInformation,
+  '/report-a-scam': ReportScam,
   '/privacy': Privacy,
   '/terms': Terms,
   '/disclaimer': Notice,
