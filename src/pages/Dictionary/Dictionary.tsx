@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import './Dictionary.css';
 import { glossaryAdditions } from './glossaryAdditions';
+import SiteFooter from '../../components/SiteFooter';
 
 type DictionaryTerm = { term: string; category: string; definition: string };
 
@@ -52,7 +53,7 @@ export default function Dictionary() {
         </div>
       </section>
       <section className="dictionary-deeper"><p className="eyebrow">Go deeper</p><h2>Want more than a definition?</h2><p>Knowledge is where WalletTrail will build deeper explanations and research around the subjects you find here.</p><a className="text-link" href="/knowledge">Explore WalletTrail Knowledge →</a></section>
-      <footer className="dictionary-footer"><p>Keep learning. Keep asking questions. Keep building confidence.</p><a href="/wallettrail-101">Continue with WalletTrail 101 →</a></footer>
+      <SiteFooter />
     </main>
   );
 }
