@@ -16,6 +16,7 @@ const investigationSteps = [
   ['03', 'We investigate the blockchain activity', 'We trace and analyse relevant transactions, wallet movements and timing.'],
   ['04', 'We establish what the evidence shows', 'Findings are structured around the available evidence and clearly separated from information that remains unverified.'],
   ['05', 'We prepare the findings', 'The investigation can result in a structured report that explains the relevant evidence and movements identified.'],
+  ['06', 'WalletTrail prepares a WalletTrail Blockchain Statement', 'We prepare a WalletTrail Blockchain Statement showing the movement of cryptocurrency associated with the wallet address provided, including relevant transactions, dates, amounts and wallet movements identified during the investigation.'],
 ] as const;
 
 export default function ReportScam() {
