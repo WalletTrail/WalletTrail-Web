@@ -22,6 +22,17 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="/" aria-label="WalletTrail home"><span className="brand-mark" aria-hidden="true">WT</span><span>WalletTrail</span></a>
         <nav className="site-nav" aria-label="Primary navigation"><a href="/wallettrail-101">Start Here</a><a href="/knowledge">Knowledge</a><a href="/dictionary">Dictionary</a><a href="/security">Security</a><a href="/evidence">Evidence</a></nav>
+        <details className="mobile-nav">
+          <summary aria-label="Open navigation"><span aria-hidden="true">☰</span><span>Menu</span></summary>
+          <nav aria-label="Mobile navigation">
+            <a href="/">Home</a>
+            <a href="/wallettrail-101">Start Here</a>
+            <a href="/knowledge">Knowledge</a>
+            <a href="/dictionary">Dictionary</a>
+            <a href="/security">Security</a>
+            <a href="/evidence">Evidence</a>
+          </nav>
+        </details>
       </header>
 
       <main id="top">
@@ -52,11 +63,6 @@ export default function Home() {
         <section className="section why-section" aria-labelledby="why-title">
           <div className="section-heading"><p className="eyebrow">Our purpose</p><h2 id="why-title">Why WalletTrail?</h2><p>Blockchain is changing how people store, move and manage value. Understanding it shouldn&apos;t be limited to technical experts.</p><p>WalletTrail was created to help bridge that gap through practical education, structured learning and clear guidance that anyone can follow.</p><p>Whether you&apos;re here to learn, understand or organise blockchain information, our goal is simple:</p><p className="section-emphasis">Help you leave knowing more than when you arrived.</p></div>
           <div className="principles-grid"><article><span>📖</span><h3>Learn Clearly</h3><p>Complex topics explained in plain language without unnecessary jargon.</p></article><article><span>🎯</span><h3>Practical Guidance</h3><p>Learn information you can apply in real-world situations, not just theory.</p></article><article><span>🧩</span><h3>Understand with Confidence</h3><p>Build your knowledge one step at a time through structured learning.</p></article><article><span>🤝</span><h3>Built for Everyone</h3><p>Whether you're completely new or already familiar with blockchain, there's always something new to discover.</p></article></div>
-        </section>
-
-        <section className="section commitment-section" aria-labelledby="commitment-title">
-          <div className="section-heading"><p className="eyebrow">What we stand for</p><h2 id="commitment-title">Our Commitment</h2><p>At WalletTrail, we believe that understanding blockchain should be accessible to everyone.</p><p>We&apos;re committed to creating educational resources that are practical, accurate and easy to understand, helping people build confidence in a rapidly evolving digital world.</p><p>As blockchain technology continues to grow, so will WalletTrail. We&apos;ll continue learning, improving and creating resources that help our community make informed decisions with greater confidence.</p></div>
-          <div className="commitment-grid"><article><span>📚</span><h3>Education First</h3><p>Learning comes before assumptions.</p></article><article><span>🤝</span><h3>Built for People</h3><p>Everything we create starts with the person using it.</p></article><article><span>🎯</span><h3>Practical Knowledge</h3><p>Information you can understand and apply.</p></article><article><span>🔄</span><h3>Always Improving</h3><p>Blockchain evolves, and so will WalletTrail.</p></article></div>
         </section>
       </main>
 
