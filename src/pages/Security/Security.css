@@ -14,33 +14,25 @@
 .security-card > p:not(.card-eyebrow) { margin-bottom: 20px; color: var(--muted); line-height: 1.75; }
 .security-card strong { color: var(--navy); font-size: 14px; line-height: 1.5; }
 .security-red-flags { width: min(1080px, calc(100% - 40px)); margin: 0 auto 32px; padding: 48px; border-radius: 24px; background: #fff2f1; border: 1px solid #f1d0cd; }
+.security-red-flags .eyebrow, .security-incident .eyebrow { color: #c43b31; }
 .security-red-flags h2 { margin-bottom: 15px; }
 .security-red-flags > p:not(.eyebrow) { max-width: 780px; color: var(--muted); line-height: 1.8; }
 .red-flag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 .red-flag-list span { padding: 10px 13px; border-radius: 999px; background: white; border: 1px solid #ebc6c2; color: #7a2821; font-size: 13px; font-weight: 750; }
-.security-incident { width: min(1080px, calc(100% - 40px)); margin: 0 auto 32px; padding: 48px; border-radius: 24px; background: var(--navy); box-shadow: 0 22px 55px rgba(13,35,72,.15); }
-.security-incident h2 { max-width: 760px; margin-bottom: 16px; color: white; }
-.security-incident p:not(.eyebrow) { max-width: 800px; margin-bottom: 26px; color: #dce7f6; line-height: 1.8; }
-.security-incident .button-primary { background: white; color: var(--navy); box-shadow: none; }
-.security-sources { width: min(1080px, calc(100% - 40px)); margin: 0 auto 90px; padding: 42px; border: 1px solid var(--line); border-radius: 22px; background: white; }
-.security-sources h2 { margin-bottom: 14px; }
-.security-sources > p:not(.eyebrow) { max-width: 780px; color: var(--muted); line-height: 1.75; }
-.source-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-.source-links a { color: var(--blue); font-weight: 750; text-decoration: none; }
-.source-links a:hover { text-decoration: underline; }
-.security-page .lesson-footer { width: min(1080px, calc(100% - 40px)); }
+.security-incident { width: min(1080px, calc(100% - 40px)); margin: 0 auto 70px; padding: 48px; border-radius: 24px; background: #fff0ef; border: 2px solid #e5a8a3; box-shadow: 0 16px 42px rgba(180,35,24,.08); }
+.security-incident h2 { max-width: 760px; margin-bottom: 16px; color: #7f1d1d; }
+.security-incident p:not(.eyebrow) { max-width: 800px; margin-bottom: 0; color: #5f3030; line-height: 1.8; }
 
 @media (max-width: 760px) {
   .security-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 620px) {
-  .security-header, .security-hero, .security-warning, .security-grid, .security-red-flags, .security-incident, .security-sources { width: min(100% - 28px, 1080px); }
+  .security-header, .security-hero, .security-warning, .security-grid, .security-red-flags, .security-incident { width: min(100% - 28px, 1080px); }
   .security-header { min-height: 72px; }
   .security-hero { padding: 68px 0 52px; }
   .security-warning { padding: 21px; }
   .security-card { padding: 28px 24px; }
-  .security-red-flags, .security-incident, .security-sources { padding: 32px 26px; }
-  .security-sources { margin-bottom: 65px; }
+  .security-red-flags, .security-incident { padding: 32px 26px; }
   .security-page .lesson-footer { width: min(100% - 28px, 1080px); flex-direction: column; }
 }
