@@ -1,21 +1,11 @@
 import { useEffect } from 'react';
 
 const journeys = [
-  {
-    icon: '🌱', title: 'I’m New to Cryptocurrency', text: 'Start your journey by learning the fundamentals of cryptocurrency and blockchain.', href: '/wallettrail-101', label: 'Start Here',
-  },
-  {
-    icon: '📚', title: 'I Want to Learn', text: 'Explore easy-to-understand guides covering blockchain, wallets, digital assets and more.', href: '/wallettrail-101', label: 'Start Learning',
-  },
-  {
-    icon: '🔍', title: 'I Want to Understand Something', text: 'Looking for a specific answer? Explore our dictionary for clear explanations of blockchain terms.', href: '/dictionary', label: 'Explore Dictionary',
-  },
-  {
-    icon: '🗂️', title: 'I Need to Organise Information', text: 'Learn what blockchain information is important and how to keep it organised for future reference.',
-  },
-  {
-    icon: '🚨', title: 'I Think Something Went Wrong', text: 'If you’ve experienced a suspicious transaction or think you’ve been affected by fraud, start by preserving the information you already have.', href: '/security', label: 'Start with Security Guidance', urgent: true,
-  },
+  { icon: '🌱', title: 'I’m New to Cryptocurrency', text: 'Start your journey by learning the fundamentals of cryptocurrency and blockchain.', href: '/wallettrail-101', label: 'Start Here' },
+  { icon: '📚', title: 'I Want to Learn', text: 'Explore easy-to-understand guides covering blockchain, wallets, digital assets and more.', href: '/wallettrail-101', label: 'Start Learning' },
+  { icon: '🔍', title: 'I Want to Understand Something', text: 'Looking for a specific answer? Explore our dictionary for clear explanations of blockchain terms.', href: '/dictionary', label: 'Explore Dictionary' },
+  { icon: '🗂️', title: 'I Need to Organise Information', text: 'Learn what blockchain information is important and how to keep it organised for future reference.' },
+  { icon: '🚨', title: 'I Think Something Went Wrong', text: 'If you’ve experienced a suspicious transaction or think you’ve been affected by fraud, start by preserving the information you already have.', href: '/security', label: 'Start with Security Guidance', urgent: true },
 ];
 
 const learningCards = [
@@ -25,15 +15,13 @@ const learningCards = [
 ];
 
 export default function Home() {
-  useEffect(() => {
-    document.title = 'WalletTrail — Helping You Understand Blockchain';
-  }, []);
+  useEffect(() => { document.title = 'WalletTrail — Helping You Understand Blockchain'; }, []);
 
   return (
     <div className="site-shell">
       <header className="site-header">
         <a className="brand" href="/" aria-label="WalletTrail home"><span className="brand-mark" aria-hidden="true">WT</span><span>WalletTrail</span></a>
-        <nav className="site-nav" aria-label="Primary navigation"><a href="/wallettrail-101">Start Here</a><a href="/dictionary">Dictionary</a><a href="/security">Security</a></nav>
+        <nav className="site-nav" aria-label="Primary navigation"><a href="/wallettrail-101">Start Here</a><a href="/knowledge">Knowledge</a><a href="/dictionary">Dictionary</a><a href="/security">Security</a><a href="/evidence">Evidence</a></nav>
       </header>
 
       <main id="top">
@@ -72,7 +60,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="footer-main"><div className="footer-brand"><a className="brand" href="/" aria-label="WalletTrail home"><span className="brand-mark" aria-hidden="true">WT</span><span>WalletTrail</span></a><p>Helping people understand blockchain through practical education, clear guidance and thoughtfully designed resources.</p></div><div className="footer-column"><h3>Explore</h3><a href="/">Home</a><a href="/wallettrail-101">Start Here</a><a href="/dictionary">Dictionary</a><a href="/security">Security</a></div><div className="footer-column"><h3>Legal</h3><span>Privacy Policy</span><span>Terms of Use</span><span>Disclaimer</span></div><div className="footer-column"><h3>Connect</h3><a href="mailto:wallettrail@wallettrailhq.com">Email us</a></div></div><div className="footer-bottom"><p>Keep learning. Keep asking questions. Keep building confidence.</p><p>© 2026 WalletTrail. All Rights Reserved.</p></div></footer>
+      <footer className="site-footer"><div className="footer-main"><div className="footer-brand"><a className="brand" href="/" aria-label="WalletTrail home"><span className="brand-mark" aria-hidden="true">WT</span><span>WalletTrail</span></a><p>Helping people understand blockchain through practical education, clear guidance and thoughtfully designed resources.</p></div><div className="footer-column"><h3>Explore</h3><a href="/">Home</a><a href="/wallettrail-101">Start Here</a><a href="/knowledge">Knowledge</a><a href="/dictionary">Dictionary</a><a href="/security">Security</a><a href="/evidence">Evidence</a></div><div className="footer-column"><h3>Legal</h3><span>Privacy Policy</span><span>Terms of Use</span><span>Disclaimer</span></div><div className="footer-column"><h3>Connect</h3><a href="mailto:wallettrail@wallettrailhq.com">Email us</a></div></div><div className="footer-bottom"><p>Keep learning. Keep asking questions. Keep building confidence.</p><p>© 2026 WalletTrail. All Rights Reserved.</p></div></footer>
     </div>
   );
 }
