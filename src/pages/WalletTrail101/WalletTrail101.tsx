@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 const lessons = [
   {
     number: '01',
@@ -32,6 +34,10 @@ const lessons = [
 ];
 
 export default function WalletTrail101() {
+  useEffect(() => {
+    document.title = 'WalletTrail 101 — Start Here';
+  }, []);
+
   return (
     <div className="lesson-page">
       <header className="lesson-header">
