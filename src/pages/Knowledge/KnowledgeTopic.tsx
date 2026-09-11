@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import './Knowledge.css';
 import SiteFooter from '../../components/SiteFooter';
 
 export const knowledgeTopics = {
