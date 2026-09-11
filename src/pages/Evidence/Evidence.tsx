@@ -20,7 +20,6 @@ const informationItems = [
 
 export default function Evidence() {
   useEffect(() => { document.title = 'WalletTrail Evidence & Reporting'; }, []);
-
   return (
     <main className="evidence-page">
       <header className="evidence-header"><a className="brand" href="/" aria-label="WalletTrail home"><span className="brand-mark" aria-hidden="true">WT</span><span>WalletTrail</span></a><a className="evidence-back" href="/">Back to WalletTrail</a></header>
@@ -28,23 +27,8 @@ export default function Evidence() {
       <section className="evidence-boundary" aria-label="What WalletTrail does"><strong>What this means:</strong><p>WalletTrail helps organise and present information. It does not determine who committed a crime, guarantee recovery of funds, or replace law enforcement or a professional investigation.</p></section>
       <section className="evidence-intro"><p className="eyebrow">The evidence pathway</p><h2>From scattered information to a structured trail.</h2><p>Start with what you already have. The goal is to preserve useful details, understand the blockchain observations and present them clearly enough for the next person to work with them.</p></section>
       <section className="evidence-steps" aria-label="Evidence and reporting steps">{steps.map(([title, text]) => <article key={title}><h2>{title}</h2><p>{text}</p></article>)}</section>
-      <section className="evidence-what" aria-labelledby="preserving-title">
-        <p className="eyebrow">Information worth preserving</p>
-        <h2 id="preserving-title">You do not need to understand everything before you keep it.</h2>
-        <p className="evidence-what-lead">If something has gone wrong, don't worry if you don't understand all the information yet. The important thing is to preserve what you have. WalletTrail can help you understand how these pieces fit together later.</p>
-        <div className="evidence-information-list">
-          {informationItems.map((item) => (
-            <article className="evidence-information-card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <div className="evidence-detail"><strong>Keep:</strong><span>{item.keep}</span></div>
-              <div className="evidence-detail"><strong>Why:</strong><span>{item.why}</span></div>
-            </article>
-          ))}
-        </div>
-        <p className="evidence-preserve-note"><strong>You do not need to understand all of this before preserving it.</strong> Keep the original information first. Understanding comes next.</p>
-      </section>
-      <section className="evidence-next"><p className="eyebrow">Start with the basics</p><h2>Not sure what you are looking at?</h2><p>Learn the fundamentals first, or use the Dictionary when you need a clear explanation of a blockchain term.</p><div className="evidence-links"><a className="button button-primary" href="/wallettrail-101">Start WalletTrail 101</a><a className="text-link" href="/dictionary">Explore the Dictionary →</a></div></section>
+      <section className="evidence-what" aria-labelledby="preserving-title"><p className="eyebrow">Information worth preserving</p><h2 id="preserving-title">You do not need to understand everything before you keep it.</h2><p className="evidence-what-lead">If something has gone wrong, don't worry if you don't understand all the information yet. The important thing is to preserve what you have. WalletTrail can help you understand how these pieces fit together later.</p><div className="evidence-information-list">{informationItems.map((item) => <article className="evidence-information-card" key={item.title}><h3>{item.title}</h3><p>{item.description}</p><div className="evidence-detail"><strong>Keep:</strong><span>{item.keep}</span></div><div className="evidence-detail"><strong>Why:</strong><span>{item.why}</span></div></article>)}</div><p className="evidence-preserve-note"><strong>You do not need to understand all of this before preserving it.</strong> Keep the original information first. Understanding comes next.</p></section>
+      <section className="evidence-next"><p className="eyebrow">What happens next</p><h2>Turn what you have into something easier to work with.</h2><p>WalletTrail can help organise relevant blockchain information into a structured evidence package and report. The purpose is to make the information clearer and easier for the appropriate professional or authority to review and verify.</p><p>WalletTrail does not decide what happened, identify a person as a criminal or guarantee recovery. Any further investigation, legal assessment or recovery action remains with the appropriate professionals and authorities.</p><div className="evidence-links"><a className="button button-primary" href="/wallettrail-101">Learn the Fundamentals</a><a className="text-link" href="/dictionary">Explore the Dictionary →</a></div></section>
       <SiteFooter />
     </main>
   );
