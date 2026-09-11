@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import SiteFooter from '../../components/SiteFooter';
 
 const journeys = [
   { icon: '🌱', title: 'I’m New to Cryptocurrency', text: 'Start your journey by learning the fundamentals of cryptocurrency and blockchain.', href: '/wallettrail-101', label: 'Start Here' },
@@ -25,12 +26,7 @@ export default function Home() {
         <details className="mobile-nav">
           <summary aria-label="Open navigation"><span aria-hidden="true">☰</span><span>Menu</span></summary>
           <nav aria-label="Mobile navigation">
-            <a href="/">Home</a>
-            <a href="/wallettrail-101">Start Here</a>
-            <a href="/knowledge">Knowledge</a>
-            <a href="/dictionary">Dictionary</a>
-            <a href="/security">Security</a>
-            <a href="/evidence">Evidence</a>
+            <a href="/">Home</a><a href="/wallettrail-101">Start Here</a><a href="/knowledge">Knowledge</a><a href="/dictionary">Dictionary</a><a href="/security">Security</a><a href="/evidence">Evidence</a>
           </nav>
         </details>
       </header>
@@ -64,9 +60,13 @@ export default function Home() {
           <div className="section-heading"><p className="eyebrow">Our purpose</p><h2 id="why-title">Why WalletTrail?</h2><p>Blockchain is changing how people store, move and manage value. Understanding it shouldn&apos;t be limited to technical experts.</p><p>WalletTrail was created to help bridge that gap through practical education, structured learning and clear guidance that anyone can follow.</p><p>Whether you&apos;re here to learn, understand or organise blockchain information, our goal is simple:</p><p className="section-emphasis">Help you leave knowing more than when you arrived.</p></div>
           <div className="principles-grid"><article><span>📖</span><h3>Learn Clearly</h3><p>Complex topics explained in plain language without unnecessary jargon.</p></article><article><span>🎯</span><h3>Practical Guidance</h3><p>Learn information you can apply in real-world situations, not just theory.</p></article><article><span>🧩</span><h3>Understand with Confidence</h3><p>Build your knowledge one step at a time through structured learning.</p></article><article><span>🤝</span><h3>Built for Everyone</h3><p>Whether you're completely new or already familiar with blockchain, there's always something new to discover.</p></article></div>
         </section>
+
+        <section className="section commitment-section" aria-labelledby="commitment-title">
+          <div className="section-heading"><p className="eyebrow">What we stand for</p><h2 id="commitment-title">Our Commitment</h2><p>At WalletTrail, we believe that understanding blockchain should be accessible to everyone.</p><p>We&apos;re committed to creating educational resources that are practical, accurate and easy to understand, helping people build confidence in a rapidly evolving digital world.</p><p>As blockchain technology continues to grow, so will WalletTrail. We&apos;ll continue learning, improving and creating resources that help our community make informed decisions with greater confidence.</p></div>
+        </section>
       </main>
 
-      <footer className="site-footer"><div className="footer-main"><div className="footer-brand"><a className="brand" href="/" aria-label="WalletTrail home"><span className="brand-mark" aria-hidden="true">WT</span><span>WalletTrail</span></a><p>Helping people understand blockchain through practical education, clear guidance and thoughtfully designed resources.</p></div><div className="footer-column"><h3>Explore</h3><a href="/">Home</a><a href="/wallettrail-101">Start Here</a><a href="/knowledge">Knowledge</a><a href="/dictionary">Dictionary</a><a href="/security">Security</a><a href="/evidence">Evidence</a></div><div className="footer-column"><h3>Legal</h3><span>Privacy Policy</span><span>Terms of Use</span><span>Disclaimer</span></div><div className="footer-column"><h3>Connect</h3><a href="mailto:wallettrail@wallettrailhq.com">Email us</a></div></div><div className="footer-bottom"><p>Keep learning. Keep asking questions. Keep building confidence.</p><p>© 2026 WalletTrail. All Rights Reserved.</p></div></footer>
+      <SiteFooter />
     </div>
   );
 }
