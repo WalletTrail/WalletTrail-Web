@@ -59,6 +59,10 @@ export default function Dictionary() {
   const entryRef = useRef<HTMLElement | null>(null);
   const shouldScrollToEntry = useRef(false);
 
+  useEffect(() => {
+    document.title = 'WalletTrail Dictionary — Blockchain Terms Explained';
+  }, []);
+
   const filteredTerms = useMemo(() => {
     const search = query.trim().toLowerCase();
     return terms.filter((term) => {
@@ -92,7 +96,7 @@ export default function Dictionary() {
 
   return (
     <main className="dictionary-page">
-      <header className="dictionary-header"><a className="brand-mark" href="/">WalletTrail</a><a className="dictionary-back" href="/">Back to WalletTrail</a></header>
+      <header className="dictionary-header"><a className="brand" href="/" aria-label="WalletTrail home"><span className="brand-mark" aria-hidden="true">WT</span><span>WalletTrail</span></a><a className="dictionary-back" href="/">Back to WalletTrail</a></header>
       <section className="dictionary-hero"><p className="eyebrow">WalletTrail Dictionary</p><h1>Blockchain terms, explained clearly.</h1><p>Search a term, browse a category or choose something you want to understand. Start with the meaning, then explore why it matters.</p></section>
       <section className="dictionary-browser">
         <div className="dictionary-search-row"><label className="dictionary-search"><span>Search the dictionary</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try “wallet”, “gas”, “phishing”..." /></label><p className="dictionary-count">{filteredTerms.length} terms</p></div>
