@@ -3,9 +3,9 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="footer-main">
         <div className="footer-brand">
-          <a className="brand" href="/" aria-label="WalletTrail home">
+          <a className="brand footer-wordmark" href="/" aria-label="WalletTrail home">
             <span className="brand-mark" aria-hidden="true">WT</span>
-            <span>WalletTrail</span>
+            <span className="footer-wordmark-text" aria-hidden="true"><span>WALLET</span><strong>TRAIL</strong></span>
           </a>
           <p>Helping people understand blockchain through practical education, clear guidance and thoughtfully designed resources.</p>
         </div>
