@@ -22,9 +22,9 @@ export default function SiteFooter() {
 
         <div className="footer-column">
           <h3>Legal</h3>
-          <span>Privacy Policy</span>
-          <span>Terms of Use</span>
-          <span>Disclaimer</span>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Use</a>
+          <a href="/disclaimer">Disclaimer</a>
         </div>
 
         <div className="footer-column">
