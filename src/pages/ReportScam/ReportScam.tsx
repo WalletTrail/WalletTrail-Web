@@ -39,13 +39,6 @@ export default function ReportScam() {
             <a className="button button-primary report-cta" href="https://forms.gle/uiTbse2c9RMszqGN7" target="_blank" rel="noreferrer">REPORT IT TO WALLETTRAIL <span aria-hidden="true">→</span></a>
             <p className="report-cta-note">Use our secure intake form to provide the information you already have.</p>
           </div>
-          <div className="report-hero-visual" aria-hidden="true">
-            <div className="report-ring ring-one" />
-            <div className="report-ring ring-two" />
-            <div className="report-ring ring-three" />
-            <div className="report-core"><img src="/assets/wallettrail-logo.webp" alt="" /></div>
-            <span className="report-dot dot-a" /><span className="report-dot dot-b" /><span className="report-dot dot-c" /><span className="report-dot dot-d" />
-          </div>
         </section>
 
         <section className="section report-explain" aria-labelledby="meaning-title">
