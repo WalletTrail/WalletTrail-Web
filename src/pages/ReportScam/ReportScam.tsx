@@ -43,7 +43,7 @@ export default function ReportScam() {
             <div className="report-ring ring-one" />
             <div className="report-ring ring-two" />
             <div className="report-ring ring-three" />
-            <div className="report-core"><span>WT</span><small>EVIDENCE</small></div>
+            <div className="report-core"><img src="/assets/wallettrail-logo.webp" alt="" /></div>
             <span className="report-dot dot-a" /><span className="report-dot dot-b" /><span className="report-dot dot-c" /><span className="report-dot dot-d" />
           </div>
         </section>
