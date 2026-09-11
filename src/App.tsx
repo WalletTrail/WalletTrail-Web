@@ -5,6 +5,9 @@ import Security from './pages/Security/Security';
 import Knowledge from './pages/Knowledge/Knowledge';
 import KnowledgeTopic from './pages/Knowledge/KnowledgeTopic';
 import Evidence from './pages/Evidence/Evidence';
+import Privacy from './pages/Legal/Privacy';
+import Terms from './pages/Legal/Terms';
+import Notice from './pages/Legal/Notice';
 
 const routes = {
   '/wallettrail-101': WalletTrail101,
@@ -20,6 +23,9 @@ const routes = {
   '/knowledge/regulation-compliance': () => <KnowledgeTopic slug="regulation-compliance" />,
   '/knowledge/blockchain-evidence': () => <KnowledgeTopic slug="blockchain-evidence" />,
   '/evidence': Evidence,
+  '/privacy': Privacy,
+  '/terms': Terms,
+  '/disclaimer': Notice,
 } as const;
 
 export default function App() {
